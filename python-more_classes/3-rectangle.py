@@ -92,7 +92,6 @@ class Rectangle:
             str: The rectangle drawn with '#', or empty string if
             width or height is 0.
         """
-        """
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join("#" * self.__width for _ in range(self.__height))
