@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This module defines a square with size and position, and printing capability."""
+"""This module defines a square with size and position, and prints it using '#'."""
 
 
 class Square:
     """Defines a square with size and position."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a square with optional size and position."""
+        """Initialize a square with size and position."""
         self.size = size
         self.position = position
 
@@ -46,19 +46,19 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Return the current square area."""
+        """Return the area of the square."""
         return self.__size ** 2
 
     def my_print(self):
-        """Print the square using the character # with position offsets."""
+        """Print the square with '#' considering the position."""
         if self.__size == 0:
             print()
             return
 
-        # vertical spaces
+        # print vertical offset (position[1])
         for _ in range(self.__position[1]):
             print()
 
-        # square lines
+        # print square with horizontal offset (position[0])
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
