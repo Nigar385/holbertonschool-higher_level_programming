@@ -3,7 +3,7 @@
 
 
 class Square:
-    """Defines a square with a private size attribute and print functionality."""
+    """Defines a square with a private size attribute and methods for area and printing."""
 
     def __init__(self, size=0):
         """Initialize a square with optional size."""
