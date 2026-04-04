@@ -89,8 +89,8 @@ class Rectangle:
         """Return a string of the rectangle drawn with '#' characters.
 
         Returns:
-            str: The rectangle drawn with '#', or empty string if width or
-            height is 0.
+            str: The rectangle drawn with '#', or empty string if
+            width or height is 0.
         """
         """
         if self.__width == 0 or self.__height == 0:
