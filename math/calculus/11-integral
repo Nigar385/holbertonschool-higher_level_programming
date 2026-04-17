@@ -10,7 +10,7 @@ def poly_integral(poly, C=0):
         C (int): constant of integration
 
     Returns:
-        list: new list of coefficients representing the integral
+        list: list of coefficients representing the integral
         or None if poly is invalid
     """
     if not isinstance(poly, list) or len(poly) == 0:
@@ -29,7 +29,6 @@ def poly_integral(poly, C=0):
 
         value = coef / (i + 1)
 
-        # float → int düzəlişi
         if value == int(value):
             value = int(value)
 
