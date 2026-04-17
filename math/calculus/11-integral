@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
-"""Module for calculating polynomial integrals."""
+"""Module for calculating the integral of a polynomial."""
 
 
 def poly_integral(poly, C=0):
-    """Calculates the integral of a polynomial.
+    """Computes the integral of a polynomial.
 
     Args:
-        poly (list): list of coefficients
+        poly (list): list of coefficients representing the polynomial
         C (int): constant of integration
 
     Returns:
-        list: new list of coefficients of the integral
-        None: if poly or C is invalid
+        list: new list of coefficients representing the integral
+              or None if poly is invalid
     """
     if not isinstance(poly, list) or len(poly) == 0:
-        return None
-
-    if not all(isinstance(x, (int, float)) for x in poly):
         return None
 
     if not isinstance(C, int):
@@ -25,12 +22,9 @@ def poly_integral(poly, C=0):
     result = [C]
 
     for i in range(len(poly)):
-        coef = poly[i] / (i + 1)
-
-        # əgər float amma əslində integerdirsə → int et
-        if coef == int(coef):
-            coef = int(coef)
-
-        result.append(coef)
+        coef = poly[i]
+        if not isinstance(coef, (int, float)):
+            return None
+        result.append(coef / (i + 1))
 
     return result
